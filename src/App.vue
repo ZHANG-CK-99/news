@@ -1,5 +1,8 @@
 <template>
-  <div>45645496</div>
+  <div>
+    <van-button type="primary">主要按钮</van-button>
+    <div class="box"></div>
+  </div>
 </template>
 <script>
 export default {
@@ -17,4 +20,10 @@ export default {
   methods: {}
 }
 </script>
-<style scoped lang="less"></style>
+<style scoped lang="less">
+.box {
+  width: 2rem;
+  height: 2rem;
+  background: red;
+}
+</style>
