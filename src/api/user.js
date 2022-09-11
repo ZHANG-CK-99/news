@@ -1,4 +1,5 @@
 import request from '@/utils/request'
+// import store from '@/store'
 /**
  *
  * @param {Object} data
@@ -15,5 +16,18 @@ export const login = (data) => {
 export const sendCodeAPI = (mobile) => {
   return request({
     url: `/v1_0/sms/codes/${mobile}`
+  })
+}
+
+/**
+ * 获取用户信息
+ * @returns Promise
+ */
+export const getUserInfo = () => {
+  return request({
+    url: '/v1_0/user'
+    // headers: {
+    //   Authorization: `Bearer ${store.state.tokenObject.token}`
+    // }
   })
 }
