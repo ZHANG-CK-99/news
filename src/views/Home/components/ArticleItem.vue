@@ -29,6 +29,7 @@
   </div>
 </template>
 <script>
+import dayjs from '@/utils/day.js'
 export default {
   name: 'ArticleItem',
   props: {
@@ -45,7 +46,7 @@ export default {
     label() {
       /* eslint-disable*/
       const { aut_name, comm_count, pubdate } = this.article
-      return `${aut_name} ${comm_count}评论 ${pubdate}`
+      return `${aut_name} ${comm_count}评论 ${dayjs(pubdate).fromNow()}`
     }
   },
   // 生命周期 - 创建完成(访问当前this实例)
